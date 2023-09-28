@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<!-- Grupo: 16, Número: 56941, Nome: Bruno Gonzalez , PL: 26 -->
+<!-- Grupo: 16, Número: 56915, Nome: Maria Santos   , PL: 26 -->
+<!-- Grupo: 16, Número: 55945, Nome: Mariana Valente, PL: 26 -->
+
+<html lang="pt">
+   <head>
+      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="position.css">
+      <script src="comportamento.js"></script>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Como jogar</title>
+   </head>
+      <header>
+         <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="barra-navegacao">
+               <ul class="nav-bar" id="topo">
+                  <li class="nav-bar-elemento"><a> <img class="logo-nav-bar" src="imagens/logo-nav-bar.png" alt="logo" height=30></a></li>
+                  <li class="nav-bar-elemento"><a href="index.html">                       PÁGINA INICIAL</a></li>
+                  <li class="nav-bar-elemento"><a href="pokedex.html">                     POKEDEX</a></li>
+                  <li class="nav-bar-elemento"><a href="comojogar.html">                   COMO JOGAR</a></li>
+                  <li class="nav-bar-elemento"><a href="sobreaequipa.html">                SOBRE</a></li>
+                  <li class="nav-bar-elemento"><a href="leaderboard.html">                 LEADERBOARD</a></li>
+                  <li class="nav-bar-elemento" style="float:right" onclick="document.getElementById('registar').style.display='block'"><a>REGISTAR</a></li>
+                  <li class="nav-bar-elemento" style="float:right" onclick="document.getElementById('login').style.display='block'"><a>   LOGIN</a></li>
+               </ul>
+            </div>
+         </nav>
+         <div id="registar" class="modal">
+            <span onclick="document.getElementById('registar').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <form class="modal-content" action="/action_page.php">
+               <div class="container">
+                  <h1>Registar</h1>
+                  <p>Preencha os seguintes espaços para criar uma conta.</p>
+                  <hr>
+                  <label for="email"><b>Email</b></label>
+                  <input id="email" style="display: none;">
+                  <input type="text" placeholder="Enter Email" name="email" required>
+                  <label for="password"><b>Password</b></label>
+                  <input id="password" style="display: none;">
+                  <input type="password" placeholder="Enter Password" name="psw" required>
+                  <label for="psw-repeat"><b>Repetir Password</b></label>
+                  <input id="psw-repeat" style="display: none;">
+                  <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                  <label>
+                  <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Lembrar-me
+                  </label>
+                  <p>Ao criar uma conta, concorda com os <a href="#" style="color:dodgerblue">Termos & Política de Privacidade</a>.</p>
+                  <div class="clearfix">
+                     <button type="button" onclick="document.getElementById('registar').style.display='none'" class="cancelbtn">Cancelar</button>
+                     <button type="submit" class="signupbtn">Registar-me</button>
+                  </div>
+               </div>
+            </form>
+         </div>
+         <div id="login" class="modal">
+            <form class="modal-content animate" action="/action_page.php" method="post">
+               <div class="imgcontainer">
+                  <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+               </div>
+               <div class="image">
+                  <img src="imagens/NicePng_pokemon-png-images_623393.png" alt="bulbasaur" width=320 height=200>
+               </div>
+               <div class="container">
+                  <label for="username"><b>Username</b></label>
+                  <input id="username" style="display:none">
+                  <input type="text" placeholder="Enter Username" name="uname" required>
+                  <label for="psw"><b>Password</b></label>
+                  <input id="psw" style="display: none;">
+                  <input type="password" placeholder="Enter Password" name="psw" required>
+                  <button type="submit">Login</button>
+                  <label>
+                  <input class="remember" type="checkbox" checked="checked" name="remember"> Lembrar-me
+                  </label>
+               </div>
+               <div class="container" style="background-color:#f1f1f1">
+                  <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancelar</button>
+                  <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn" >Esqueceu-se da sua palavra-passe?</button>
+               </div>
+            </form>
+         </div>
+      </header>
+      <body onkeydown='movimento(event)'>
+         <h1> Jogo </h1>
+         <main class="grid">
+         <div class="grid-container">
+            <div class="grid-item arvore">1</div>
+            <div class="grid-item"><div class="grid-item"><img id="imagem1" src="jogo/frente.png" alt="personagem" width=70 height=70/></div></div>
+            <div class="grid-item arvore">3</div>
+            <div class="grid-item arvore">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item arvore">6</div>
+            <div class="grid-item arvore">7</div>
+
+            <div class="grid-item pedra">8</div>
+            <div class="grid-item">9</div>
+            <div class="grid-item">10</div>
+            <div class="grid-item">11</div>
+            <div class="grid-item">12</div>
+            <div class="grid-item">13</div>
+            <div class="grid-item">14</div>
+
+            <div class="grid-item">15</div>
+            <div class="grid-item">16</div>
+            <div class="grid-item">17</div>
+            <div class="grid-item pedra">18</div>
+            <div class="grid-item">19</div>
+            <div class="grid-item">20</div>
+            <div class="grid-item pedra">21</div>
+
+            <div class="grid-item">22</div>
+            <div class="grid-item">23</div>
+            <div class="grid-item arvore">24</div>
+            <div class="grid-item">25</div>
+            <div class="grid-item">26</div>
+            <div class="grid-item">27</div>
+            <div class="grid-item">28</div>
+
+            <div class="grid-item">29</div>
+            <div class="grid-item pedra">30</div>
+            <div class="grid-item pedra">31</div>
+            <div class="grid-item">32</div>
+            <div class="grid-item pedra">33</div>
+            <div class="grid-item">34</div>
+            <div class="grid-item">35</div>
+
+            <div class="grid-item">36</div>
+            <div class="grid-item arvore">37</div>
+            <div class="grid-item">38</div>
+            <div class="grid-item">39</div>
+            <div class="grid-item pedra">40</div>
+            <div class="grid-item">41</div>
+            <div class="grid-item arvore">42</div>
+
+            <div class="grid-item">43</div>
+            <div class="grid-item">44</div>
+            <div class="grid-item"></div>
+            <div class="grid-item arvore">46</div>
+            <div class="grid-item arvore">47</div>
+            <div class="grid-item chegada"></div>
+            <div class="grid-item">49</div>
+          </div>
+
+         </div>
+         	
+         <div>	
+          <script type="text/javascript">	
+            	
+            var objImagem= null;	
+            function init(){	
+               objImagem=document.getElementById("imagem1");					
+               objImagem.style.position= 'relative';	
+               objImagem.style.left='0px';	
+               objImagem.style.top='0px';	
+            }	
+            function movimento(e){					
+               var key_code=e.which||e.keyCode;	
+               switch(key_code){	
+                  case 37: //seta esquerda	
+                     esquerda();	
+                     break;	
+                  case 38: //seta para cima	
+                     cima();	
+                     break;	
+                  case 39: //seta para a direita	
+                     direita();	
+                     break;	
+                  case 40: //seta para baixo	
+                     baixo();	
+                     break;							
+               }	
+            }	
+            function esquerda(){	
+               objImagem.style.left=parseInt(objImagem.style.left)-100 +'px';	
+            }	
+            function cima(){	
+               objImagem.style.top=parseInt(objImagem.style.top)-90 +'px';	
+            }	
+            function direita(){	
+               objImagem.style.left=parseInt(objImagem.style.left)+100 +'px';	
+            }	
+            function baixo(){	
+               objImagem.style.top=parseInt(objImagem.style.top)+100 +'px';	
+            }	
+            window.onload=init;	
+         </script>	
+         </div>
+
+          </main>
+      </body>
+      <footer>
+         <div class="names">
+            <br>
+            <a class="name-footer"> Maria Santos </a>
+            <a class="name-footer"> Bruno Gonzalez </a>
+            <a class="name-footer"> Mariana Valente </a>
+         </div>
+         <p class="copyright">©  2021 Company - All Rights Reserved. A Equipa</p>
+      </footer>
+</html>

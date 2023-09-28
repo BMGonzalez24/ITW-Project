@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<!-- Grupo: 16, Número: 56941, Nome: Bruno Gonzalez , PL: 26 -->
+<!-- Grupo: 16, Número: 56915, Nome: Maria Santos   , PL: 26 -->
+<!-- Grupo: 16, Número: 55945, Nome: Mariana Valente, PL: 26 -->
+
+<html lang="pt">
+   <head>
+      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="position.css">
+      <script src="comportamento.js"></script>
+      <script src="leaderboard.js"></script>
+      <link rel="shortcut icon" type="image/x-icon" href="imagens/favicon.ico"/>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Atualizações</title>
+   </head>
+   <body>
+      <header>
+         <nav>
+            <div class="barra-navegacao">
+               <ul class="nav-bar" id="topo">
+                  <li class="nav-bar-elemento"><a> <img class="logo-nav-bar" src="imagens/logo-nav-bar.png" alt="logo" height=30></a></li>
+                  <li class="nav-bar-elemento"><a href="index.html">                       PÁGINA INICIAL</a></li>
+                  <li class="nav-bar-elemento"><a href="pokedex.html">                     POKEDEX</a></li>
+                  <li class="nav-bar-elemento"><a href="comojogar.html">                   COMO JOGAR</a></li>
+                  <li class="nav-bar-elemento"><a href="sobreaequipa.html">                SOBRE</a></li>
+                  <li class="nav-bar-elemento"><a href="leaderboard.html">                 LEADERBOARD</a></li>
+                  <li class="nav-bar-elemento" style="float:right" onclick="document.getElementById('registar').style.display='block'"><a>REGISTAR</a></li>
+                  <li class="nav-bar-elemento" style="float:right" onclick="document.getElementById('login').style.display='block'"><a>   LOGIN</a></li>
+               </ul>
+            </div>
+         </nav>
+      </header>
+      <h1>
+         LEADERBOARD
+      </h1>
+      <main class="grid">
+         <div class="caixa">
+            <p>Nesta secção poderás encontrar o top dos mestres Pokémons à volta do mundo! Estes são os 
+               jogadores mais dedicados que cada vez mais masterizam a arte da conquista destes monstrinhos 
+               virtuais e que servem de exemplo para toda a comunidade! Se queres aparecer nesta lista, tem 
+               a certeza que entendes e dominas as regras escritas no Como Jogar.
+            </p>
+            <table id="tblEncomendas">
+            </table>
+            <img class="iniciantes" src="imagens/iniciantes.png" alt="Iniciantes" width=500 height=300>
+         </div>
+      </main>
+     
+      <div><a class="topo" href="#topo" style="color:black;"> VOLTAR<BR>AO TOPO</a></div>
+
+         <div id="registar" class="modal">
+            <span onclick="document.getElementById('registar').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <form class="modal-content" action="file:///Users/mariasantos/Desktop/2o%20semestre/Tecnologias%20Web/Projeto%20Pokemon/index.html">
+               <div class="container">
+                  <h1>Registar</h1>
+                  <p>Preencha os seguintes espaços para criar uma conta.</p>
+                  <hr>
+                  <div class="inputBox">
+                  <label for="username"><b>Username</b></label>
+                  <input style="display: none;">
+                  <input type="text" placeholder="Escreva um username" name="username" required id="username">
+                  </div>
+                  <div class="inputBox">
+                  <label for="password"><b>Password</b></label>
+                  <input style="display: none;">
+                  <input type="password" placeholder="Enter Password" name="psw" required id="pw">
+                  </div>
+                  <label for="psw-repeat"><b>Repetir Password</b></label>
+                  <input style="display: none;">
+                  <input type="password" placeholder="Repeat Password" name="psw-repeat" required id="repeat-pw">
+                  
+                  <label>
+                  <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Lembrar-me
+                  </label>
+                  <p>Ao criar uma conta, concorda com os <a href="#" style="color:dodgerblue">Termos & Política de Privacidade</a>.</p>
+                  <div class="clearfix">
+                     <button type="button" onclick="document.getElementById('registar').style.display='none'" class="cancelbtn">Cancelar</button>
+                     <button type="submit" value="get Account" onclick="store()"class="signupbtn">Registar-me</button>
+                  </div>
+               </div>
+            </form>
+         </div>
+         <div id="login" class="modal">
+            <form class="modal-content animate" action="file:///Users/mariasantos/Desktop/2o%20semestre/Tecnologias%20Web/Projeto%20Pokemon/jogo.html">
+               <div class="imgcontainer">
+                  <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+               </div>
+               <div class="image">
+                  <img src="imagens/NicePng_pokemon-png-images_623393.png" alt="bulbasaur" width=320 height=200>
+               </div>
+               <div class="container">
+                  <label for="username"><b>Username</b></label>
+                  <input style="display:none">
+                  <input type="text" placeholder="Enter Username" name="uname" required id="userName">
+                  <label for="psw"><b>Password</b></label>
+                  <input style="display: none;">
+                  <input type="password" placeholder="Enter Password" name="psw" required id="userPw">
+                  <button type="submit" value="Login" onclick="check()">Login</button>
+                  <label>
+                  <input class="remember" type="checkbox" checked="checked" name="remember"> Lembrar-me
+                  </label>
+               </div>
+               <div class="container" style="background-color:#f1f1f1">
+                  <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancelar</button>
+                  <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn" >Esqueceu-se da sua palavra-passe?</button>
+               </div>
+            </form>
+         </div>
+   </body>
+   <footer>
+      <div class="names">
+         <br>
+         <a class="name-footer"> Maria Santos </a>
+         <a class="name-footer"> Bruno Gonzalez </a>
+         <a class="name-footer"> Mariana Valente </a>
+      </div>
+      <p class="copyright">©  2021 Company - All Rights Reserved. A Equipa Pokemon Jade</p>
+   </footer>
+</html>

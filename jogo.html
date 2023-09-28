@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<!-- Grupo: 16, Número: 56941, Nome: Bruno Gonzalez , PL: 26 -->
+<!-- Grupo: 16, Número: 56915, Nome: Maria Santos   , PL: 26 -->
+<!-- Grupo: 16, Número: 55945, Nome: Mariana Valente, PL: 26 -->
+<html lang="pt">
+   <head>
+      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="position.css">
+      <script type="text/javascript" src="comportamento.js"></script>
+      <script src="jquery-3.6.0.min.js"></script>
+      <script src="timer.js"></script>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="shortcut icon" type="image/x-icon" href="imagens/favicon.ico"/>
+      <title>Jogo</title>
+   </head>
+   <header>
+      <nav class="navbar navbar-default navbar-fixed-top">
+         <div class="barra-navegacao">
+            <ul class="nav-bar" id="topo">
+               <li class="nav-bar-elemento"><a> <img class="logo-nav-bar" src="imagens/logo-nav-bar.png" alt="logo" height=30></a></li>
+               <li class="nav-bar-elemento"><a href="index.html">                       PÁGINA INICIAL</a></li>
+               <li class="nav-bar-elemento"><a href="pokedex.html">                     POKEDEX</a></li>
+               <li class="nav-bar-elemento"><a href="comojogar.html">                   COMO JOGAR</a></li>
+               <li class="nav-bar-elemento"><a href="sobreaequipa.html">                SOBRE</a></li>
+               <li class="nav-bar-elemento"><a href="leaderboard.html">                 LEADERBOARD</a></li>
+               <li class="nav-bar-elemento" style="float:right" onclick="document.getElementById('registar').style.display='block'"><a>REGISTAR</a></li>
+               <li class="nav-bar-elemento" style="float:right" onclick="document.getElementById('login').style.display='block'"><a>   LOGIN</a></li>
+               <li class="nav-bar-elemento" style="float:right"><a id="username"></a></li>
+            </ul>
+         </div>
+      </nav>
+      <div id="registar" class="modal">
+         <span onclick="document.getElementById('registar').style.display='none'" class="close" title="Close Modal">&times;</span>
+         <form class="modal-content" action="file:///Users/mariasantos/Desktop/2o%20semestre/Tecnologias%20Web/Projeto%20Pokemon/index.html">
+            <div class="container">
+               <h1>Registar</h1>
+               <p>Preencha os seguintes espaços para criar uma conta.</p>
+               <hr>
+               <div class="inputBox">
+                  <label for="username"><b>Username</b></label>
+                  <input style="display: none;">
+                  <input type="text" placeholder="Escreva um username" name="username" required id="username">
+               </div>
+               <div class="inputBox">
+                  <label for="password"><b>Password</b></label>
+                  <input style="display: none;">
+                  <input type="password" placeholder="Enter Password" name="psw" required id="pw">
+               </div>
+               <label for="psw-repeat"><b>Repetir Password</b></label>
+               <input style="display: none;">
+               <input type="password" placeholder="Repeat Password" name="psw-repeat" required id="repeat-pw">
+               <label>
+               <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Lembrar-me
+               </label>
+               <p>Ao criar uma conta, concorda com os <a href="#" style="color:dodgerblue">Termos & Política de Privacidade</a>.</p>
+               <div class="clearfix">
+                  <button type="button" onclick="document.getElementById('registar').style.display='none'" class="cancelbtn">Cancelar</button>
+                  <button type="submit" value="get Account" onclick="store()"class="signupbtn">Registar-me</button>
+               </div>
+            </div>
+         </form>
+      </div>
+      <div id="login" class="modal">
+         <form class="modal-content animate" action="file:///Users/mariasantos/Desktop/2o%20semestre/Tecnologias%20Web/Projeto%20Pokemon/jogo.html">
+            <div class="imgcontainer">
+               <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
+            <div class="image">
+               <img src="imagens/NicePng_pokemon-png-images_623393.png" alt="bulbasaur" width=320 height=200>
+            </div>
+            <div class="container">
+               <label for="username"><b>Username</b></label>
+               <input style="display:none">
+               <input type="text" placeholder="Enter Username" name="uname" required id="userName">
+               <label for="psw"><b>Password</b></label>
+               <input style="display: none;">
+               <input type="password" placeholder="Enter Password" name="psw" required id="userPw">
+               <button type="submit" value="Login" onclick="check()">Login</button>
+               <label>
+               <input class="remember" type="checkbox" checked="checked" name="remember"> Lembrar-me
+               </label>
+            </div>
+            <div class="container" style="background-color:#f1f1f1">
+               <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancelar</button>
+               <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn" >Esqueceu-se da sua palavra-passe?</button>
+            </div>
+         </form>
+      </div>
+   </header>
+   <body>
+      <main class="grid">
+         <h1>Bem-Vindo ao Pokémon Jade</h1>
+         <div class="timer">
+            <p>Timer</p>
+            <p id="timer"></p>
+            <script src="timer.js"></script>
+         </div>
+         <br>
+         <div class="caixa" id="conteudo">
+            <section class="grid-jogo" id="jogo">
+               <div class="itemJogo arvore"></div>
+               <div class="itemJogo partida"><img src="jogo/jogadorBaixo.png" class="bonecoJogador"></div>
+               <div class="itemJogo arvore"></div>
+               <div class="itemJogo arvore"></div>
+               <div class="itemJogo arvore"></div>
+               <div class="itemJogo pedra"></div>
+               <div class="itemJogo arvore"></div>
+               <div class="itemJogo pedra"></div>
+               <div class="itemJogo arvore"></div>
+               <div class="itemJogo"></div>
+               <div class="itemJogo"></div>
+               <div class="itemJogo"></div>
+               <div class="itemJogo"><img src="jogo/pokebola.png" class="pokebola"></div>
+               <div class="itemJogo"></div>
+               <div class="itemJogo"></div>
+               <div class="itemJogo arvore"></div>
+               <div class="itemJogo pedra"></div>
+               <div class="itemJogo"></div>
+               <div class="itemJogo"></div>
+               <div class="itemJogo pedra"></div>
+               <div class="itemJogo"></div>
+               <div class="itemJogo"></div>
+               <div class="itemJogo"></div>
+               <div class="itemJogo pedra"></div>
+               <div class="itemJogo arvore"></div>
+               <div class="itemJogo"></div>
+               <div class="itemJogo pedra"></div>
+               <div class="itemJogo"></div>
+               <div class="itemJogo"></div>
+               <div class="itemJogo arvore"></div>
+               <div class="itemJogo"></div>
+               <div class="itemJogo arvore"></div>
+               <div class="itemJogo arvore"></div>
+               <div class="itemJogo"></div>
+               <div class="itemJogo arvore"></div>
+               <div class="itemJogo"></div>
+               <div class="itemJogo pedra"></div>
+               <div class="itemJogo"></div>
+               <div class="itemJogo"><img src="jogo/pokebola.png" class="pokebola"></div>
+               <div class="itemJogo pedra"></div>
+               <div class="itemJogo pedra"></div>
+               <div class="itemJogo"></div>
+               <div class="itemJogo"></div>
+               <div class="itemJogo"></div>
+               <div class="itemJogo arvore"></div>
+               <div class="itemJogo"></div>
+               <div class="itemJogo"></div>
+               <div class="itemJogo  pedra"></div>
+               <div class="itemJogo arvore"></div>
+               <div class="itemJogo pedra"></div>
+               <div class="itemJogo arvore"></div>
+               <div class="itemJogo arvore"></div>
+               <div class="itemJogo pedra"></div>
+               <div class="itemJogo pedra"></div>
+               <div class="itemJogo chegada" id="fim"></div>
+               <div class="itemJogo arvore"></div>
+            </section>
+         </div>
+         <script>
+            ///////////////////////////////// JOGO ////////////////////////////////
+              /////////////////////////////// SONS ///////////////////////////////
+              const somParede = new Audio('jogo/parede.mp3');
+              
+              var musicaFundo = new Audio('jogo/fundo.mp3');
+              musicaFundo.volume = 0.05;
+              
+              musicaFundo.play();
+              
+              /////////////////////////////// POKÉDEX ///////////////////////////////
+              const pokemons = {
+                // Chave      : 0      , 1      , 2       //
+                // Nome       : VidaMax, AtaqMax, AtaqMin //
+                  'Bulbasaur' : [25,     6 ,      1],    //Vida++ Ataq--
+                  'Squirtle'  : [20,     8 ,      2],    //Vida== Ataq==
+                  'Charmander': [15,     10,      3],    //Vida-- Ataq++
+              };
+              const nomesPokemons = Object.keys(pokemons).join(', ');
+              const listaPokemons = [Object.keys(pokemons)]
+              
+              /////////////////////////////// MAPA & MOVIMENTO ///////////////////////////////
+              
+              // Numeração do Mapa
+              mapa = [01,02,03,04,05,06,07,08, 
+                      09,10,11,12,13,14,15,16,
+                      17,18,19,20,21,22,23,24,
+                      25,26,27,28,29,30,31,32,
+                      33,34,35,36,37,38,39,40,
+                      41,42,43,44,45,46,47,48,
+                      49,50,51,52,53,54,55,56];
+              
+                  /* Informações: Começa em 02 | Acaba em 55 | Encounters em 13 e 39 */
+              
+              // Programação do map (XX = parede, 0 = caminho)
+              const paredes = [01,00,03,04,05,06,07,08, 
+                               09,00,00,00,00,00,00,16,
+                               17,00,00,20,00,00,00,24,
+                               25,00,27,00,00,30,00,32,
+                               33,00,35,00,37,00,00,40,
+                               41,00,00,00,45,00,00,48,
+                               49,50,51,52,53,54,00,56];
+              
+              /*************************** Posição atual ***************************/
+              
+              const mapaLocalizacao = $("#jogo").children()
+              
+              // Posição inicial
+              const posicaoInicial = 2;
+              const posicaoFinal = 55;
+              var posicao = posicaoInicial;
+              
+              const encontros = [13, 39];
+              
+              
+              // Calcular a próxima posição
+              function localizacao(x,direcao) {
+                  testeposicao = posicao + x;
+              
+                  if (paredes.includes(testeposicao) == true || testeposicao < mapa[0] || testeposicao > mapa[mapa.length-1]) {   //quando anada para cima de uma parede
+                      mapaLocalizacao.eq(posicao-1).empty()
+                      mapaLocalizacao.eq(posicao-1).append($('<img src="jogo/'+direcao+'.png" class="bonecoJogador">'));
+                      somParede.play();
+                      return console.log("Encontrou um obstáculo");
+                  } 
+              
+                  else {     // quando o mov. é bem sucedido
+                      posicao = testeposicao;
+              
+                      if (encontros.includes(posicao) == true) {
+                          posicao = testeposicao
+                          console.log(posicao);
+                          iniciarBatalha(pokemonJogador, listaPokemons[0][Math.floor(Math.random()*listaPokemons[0].length)]);
+                      }
+              
+                      mapaLocalizacao.eq(posicao-x-1).empty();
+                      mapaLocalizacao.eq(posicao-1).append($('<img src="jogo/'+direcao+'.png" class="bonecoJogador">'));
+            
+                      var fim = document.getElementById('fim');
+                      if (posicao == posicaoFinal) {localStorage.setItem('Terminou', fim.value)};
+                  }
+              }
+              
+              /*************************** Movimentos ***************************/
+              function cima() {
+                  return localizacao(-8,'jogadorCima');
+              };
+              function baixo() {
+                if (localStorage.getItem('username') == null) {
+                    window.confirm('Login não foi concluido. Por favor, faça login para continuar.');
+                    window.location.replace('index.html')
+                  }
+                else {return localizacao(8,'jogadorBaixo');}
+              };
+              function direita() {
+                  return localizacao(1,'jogadorDireita');
+              };
+              function esquerda() {
+                  return localizacao(-1,'jogadorEsquerda');
+              };
+              
+              /*************************** Fazer movimentos com as setas ***************************/
+              document.onkeydown = function() {
+                  switch (window.event.keyCode) {
+                      case 37: // Esquerda
+                       esquerda();
+                       break;
+                      case 38: // Cima
+                       cima();
+                       break;
+                      case 39: // Direita
+                      direita();
+                       break;
+                      case 40: // Baixo
+                      baixo();
+                      break;
+                  }
+              };
+              
+              
+              /////////////////////////////// ESCOLHA POKEMON ///////////////////////////////
+              let pokemonJogador
+              function escolherPokemon() {
+                  if (localStorage.getItem('username') == null) {
+                    window.confirm('Login não foi concluido. Por favor, faça login para continuar.');
+                  }
+                  else {
+                    localizacao(posicaoInicial,'jogadorBaixo');
+                    localStorage.removeItem("Terminou");
+                    let escolha;
+                    do { escolha = prompt(`Pokémons disponíveis: ${nomesPokemons}.`);
+                    } while(nomesPokemons.includes(escolha) !== true);
+                    pokemonJogador = escolha;
+                  }
+              }; 
+              
+              escolherPokemon();
+              
+                  
+              /////////////////////////////// BATALHA ///////////////////////////////
+              
+              // Função para calcular o dano
+              function atacar(max,min) { return Math.floor(Math.random()*max+min); }; 
+              
+              // Batalha
+              function iniciarBatalha(jogador,adv) {                      // HP -> Health Points
+              
+                  let jogadorHP = pokemons[jogador][0];                   // HP ou Nível de Força do Jogador
+                  const jogadorHPTotal = jogadorHP;                       // HP ou Nível de Força Total do Jogador
+              
+                  let advHP = pokemons[adv][0];                           // HP ou Nível de Força do Adv
+                  const advHPTotal = advHP;                               // HP ou Nível de Força Total do Adv
+              
+                  let turno = 1;                                          // Var do turno
+                  
+                  const opcoes = ['Atacar'];
+              
+                  if (jogadorHP >= advHP) {
+                      window.confirm(`${jogador}: ${jogadorHP}/${jogadorHPTotal} (Jogador)\n${adv}: ${advHP}/${advHPTotal}\n${jogador} ataca primeiro.`);
+              
+                      while (jogadorHP > 0 && advHP > 0) {
+                          let escolha;
+                          do { escolha = prompt(`${turno}º Turno\n${jogador}: ${jogadorHP}/${jogadorHPTotal} (Jogador)\n${adv}: ${advHP}/${advHPTotal}.\nO que vai fazer?\nAtacar.`);
+                          } while(opcoes.includes(escolha) !== true);
+                          advHP     = jogadorAtaq(advHP,jogadorHP,jogador,adv);
+                          if (advHP == 'stop') {return};
+              
+                          jogadorHP = advAtaq(jogadorHP,advHP,jogador,adv);
+                          if (jogadorHP == 'stop') {return recomecarJogo();};
+              
+                          console.log(`${jogador}: ${jogadorHP}/${jogadorHPTotal}\n${adv}: ${advHP}/${advHPTotal}`);
+                          turno++;
+                      }
+                      return
+                  };
+              
+                  if (advHP > jogadorHP) {
+                      window.confirm(`${jogador}: ${jogadorHP}/${jogadorHPTotal} (Jogador)\n${adv}: ${advHP}/${advHPTotal}\n${jogador} ataca primeiro.`)
+              
+                      while (jogadorHP > 0 && advHP > 0) {
+                          jogadorHP = advAtaq(jogadorHP,advHP,jogador,adv);
+                          if (jogadorHP == 'stop') {return recomecarJogo();};
+              
+                          let escolha;
+                          do {  escolha = prompt(`${turno}º Turno\n${jogador}: ${jogadorHP}/${jogadorHPTotal} (Jogador)\n${adv}: ${advHP}/${advHPTotal}.\nO que vai fazer? Opções: Atacar.`);
+                          } while(opcoes.includes(escolha) !== true);
+                          advHP     = jogadorAtaq(advHP,jogadorHP,jogador,adv);
+                          if (advHP == 'stop') {return};
+                          
+                          turno++;
+                      };
+                      return
+                  };
+              };
+              
+              function jogadorAtaq(advHP,jogadorHP,jogador,adv) {
+                  dano = atacar(pokemons[jogador][1], pokemons[jogador][2]);
+                  advHP -= dano;
+                  if (advHP <= 0) {
+                      window.confirm(`${adv} perdeu ${dano} níveis e ficou sem níveis de força.\n${jogador} ganha a batalha com ${jogadorHP} níveis de força!`);
+                      return 'stop';
+                  }     
+                  window.confirm(`${jogador} ataca e retira ${dano} níveis de força a ${adv}.`);
+                  return advHP;
+              }
+              
+              function advAtaq(jogadorHP,advHP,jogador,adv) {
+                  dano = atacar(pokemons[adv][1], pokemons[adv][2]);
+                  jogadorHP -= dano;
+                  if (jogadorHP <= 0) {
+                      window.confirm(`${jogador} perdeu ${dano} níveis e ficou sem níveis de força.\n${adv} ganha a batalha com ${advHP} níveis de força!`);
+                      return 'stop';
+                  }
+                  window.confirm(`${adv} ataca e retira ${dano} níveis de força a ${jogador}.`);
+                  return jogadorHP;
+              }
+              
+              
+              /////////////////////////////// RECOMECAR ///////////////////////////////
+              function recomecarJogo() {
+                  window.confirm(`O seu Pokémon ficou sem força! Fim do jogo.\nO jogo vai agora reiniciar.`);
+                  location.reload();
+              }
+            
+              /////////////////////////////// STOP SENSUAL///////////////////////////////
+            
+         </script>
+      </main>
+   </body>
+   <footer class="footer">
+      <div class="names">
+         <br>
+         <a class="name-footer"> Maria Santos </a>
+         <a class="name-footer"> Bruno Gonzalez </a>
+         <a class="name-footer"> Mariana Valente </a>
+      </div>
+      <p class="copyright">©  2021 Company - All Rights Reserved. A Equipa</p>
+   </footer>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<!-- Grupo: 16, Número: 56941, Nome: Bruno Gonzalez , PL: 26 -->
+<!-- Grupo: 16, Número: 56915, Nome: Maria Santos   , PL: 26 -->
+<!-- Grupo: 16, Número: 55945, Nome: Mariana Valente, PL: 26 -->
+
+<html lang="pt">
+   <head>
+      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="position.css">
+      <script src="comportamento.js"></script>
+      <link rel="shortcut icon" type="image/x-icon" href="imagens/favicon.ico"/>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Como jogar</title>
+   </head>
+   <body>
+      <header>
+         <nav>
+            <div class="barra-navegacao">
+               <ul class="nav-bar" id="topo">
+                  <li class="nav-bar-elemento"><a> <img class="logo-nav-bar" src="imagens/logo-nav-bar.png" alt="logo" height=30></a></li>
+                  <li class="nav-bar-elemento"><a href="index.html">                       PÁGINA INICIAL</a></li>
+                  <li class="nav-bar-elemento"><a href="pokedex.html">                     POKEDEX</a></li>
+                  <li class="nav-bar-elemento"><a href="comojogar.html">                   COMO JOGAR</a></li>
+                  <li class="nav-bar-elemento"><a href="sobreaequipa.html">                SOBRE</a></li>
+                  <li class="nav-bar-elemento"><a href="leaderboard.html">                 LEADERBOARD</a></li>
+                  <li class="nav-bar-elemento" style="float:right" onclick="document.getElementById('registar').style.display='block'"><a>REGISTAR</a></li>
+                  <li class="nav-bar-elemento" style="float:right" onclick="document.getElementById('login').style.display='block'"><a>   LOGIN</a></li>
+               </ul>
+            </div>
+         </nav>
+      </header>
+      <h1>COMO JOGAR</h1>
+      <main class="grid">
+         <div class="caixa">
+            <p> Pokémon Jade é um jogo que se aprende em pouco minutos mas que permite ao utilizador aproveitar
+               dias de divertimento! Mas antes, é preciso preparar-se:
+            </p>
+            <h2><u>Requesito:</u></h2>
+            <p> Primeiro será preciso criar uma conta, para isso é preciso deslocar-se à barra de navegação
+               e clicar em "Registar" ou clicando nestea hiperligação caso não a tenha já criado. Depois basta
+               fazer login e poderá começar a jogar!
+            </p>
+            <h2><u>Que comece a aventura:</u></h2>
+            <p> Pokémon Jade é um jogo que se aprende em pouco minutos mas que permite ao 
+               utilizador aproveitar dias de divertimento! Tudo começa com uma simples escolha:
+            </p>
+            <p>(Respetivamente) Squirtle, Bulbasaur e Charmander são os três pokémons estão ao seu dispor mas será possível 
+               escolher apenas um. Esse será o teu companheiro até ao fim desta aventura e os outros serão os teus adversários!
+               <br>
+               Após a escolha estar completa serás colocado num mapa 5x5 e teu objetivo principal será chegar ao fim do mesmo.
+               Para isto terás de superar vários obestáculos como árvores, pedras e água! Mas o verdadeiro desafio será enfrentar
+               os teus adversários através do: 
+               <img src="imagens/tabuleiro.png" alt="Pokémons Iniciais" class="jogar" height="400">
+            </p>
+            <h2><u>Combate:</u></h2>
+            <p>As batalhas serão realizadas no modo um contra um: tu contra o teu adverásrio. Tudo girá a volta do vosso nível
+               de poder e sorte nos dados. Cada um dos vossos Pokémon terá (no futuro) um nível de força, este número será muito 
+               importante pois todo o combate gira a volta deste número.
+               <br>
+               <br>
+               Quando o jogador encontrar um adversátio no mapa irá-se iniciar o combate. Cada combatente lançará dois dados 
+               que determinaram o nível de força dos respetivos Pokémon, sendo que quem tem um nível de força superior será o 
+               primeiro a atacar. Em caso de empate, o jogadador terá a prioridade. 
+               <br>
+               <br>
+               Após a ordem de atacar estar determinada, os treinadores lançaram o mesmo par de dados por turnos. Se soma de ambos
+               os valores for igual ou superior ao nível de força do adversário, o Pokémon irá acertar o seu ataque e reduzirá o
+               nível do adversário por 1. Caso contrário, irá simplesmente falhar e nada acontecerá. Este processo irá repetir-se 
+               até um ficar sem mais força.
+            </p>
+            <p>
+               <img src="imagens/dados.png" alt="Pokémons Iniciais" class="jogar" height="300">
+            </p>
+            <h2><u>Ganha o Jogo:</u></h2>
+            <p>
+               Ganha o jogador que obtiver <strong>número superior ou igual ao nível de força do oponente</strong>  após serem lançados os dados e somados os resultados. 
+               <br>
+               <br>
+               O jogo termina caso o jogador <strong> perca todos os níveis de força durante a batalha ou caso chegue ao final do percurso</strong> .
+               <br>
+               <br>
+               No final da batalha, caso o jogador tenha vencido o oponente, o mesmo terá a oportunidade de <strong>capturar o pokemon inimigo e adicioná-lo à sua equipa</strong>.
+               <br>
+               <br>
+               Boa sorte, treinador!
+               <br>
+               <br>
+               <img src="imagens/comojogar1.png" alt="Pokémons Iniciais" class="jogar" width="300" height="180">
+            </p>
+         </div>
+      </main>
+      
+      <div><a class="topo" href="#topo" style="color:black;"> VOLTAR<BR>AO TOPO</a></div>
+         <div id="registar" class="modal">
+            <span onclick="document.getElementById('registar').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <form class="modal-content" action="file:///Users/mariasantos/Desktop/2o%20semestre/Tecnologias%20Web/Projeto%20Pokemon/index.html">
+               <div class="container">
+                  <h1>Registar</h1>
+                  <p>Preencha os seguintes espaços para criar uma conta.</p>
+                  <hr>
+                  <div class="inputBox">
+                  <label for="username"><b>Username</b></label>
+                  <input style="display: none;">
+                  <input type="text" placeholder="Escreva um username" name="username" required id="username">
+                  </div>
+                  <div class="inputBox">
+                  <label for="password"><b>Password</b></label>
+                  <input style="display: none;">
+                  <input type="password" placeholder="Enter Password" name="psw" required id="pw">
+                  </div>
+                  <label for="psw-repeat"><b>Repetir Password</b></label>
+                  <input style="display: none;">
+                  <input type="password" placeholder="Repeat Password" name="psw-repeat" required id="repeat-pw">
+                  
+                  <label>
+                  <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Lembrar-me
+                  </label>
+                  <p>Ao criar uma conta, concorda com os <a href="#" style="color:dodgerblue">Termos & Política de Privacidade</a>.</p>
+                  <div class="clearfix">
+                     <button type="button" onclick="document.getElementById('registar').style.display='none'" class="cancelbtn">Cancelar</button>
+                     <button type="submit" value="get Account" onclick="store()"class="signupbtn">Registar-me</button>
+                  </div>
+               </div>
+            </form>
+         </div>
+         <div id="login" class="modal">
+            <form class="modal-content animate" action="file:///Users/mariasantos/Desktop/2o%20semestre/Tecnologias%20Web/Projeto%20Pokemon/jogo.html">
+               <div class="imgcontainer">
+                  <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+               </div>
+               <div class="image">
+                  <img src="imagens/NicePng_pokemon-png-images_623393.png" alt="bulbasaur" width=320 height=200>
+               </div>
+               <div class="container">
+                  <label for="username"><b>Username</b></label>
+                  <input style="display:none">
+                  <input type="text" placeholder="Enter Username" name="uname" required id="userName">
+                  <label for="psw"><b>Password</b></label>
+                  <input style="display: none;">
+                  <input type="password" placeholder="Enter Password" name="psw" required id="userPw">
+                  <button type="submit" value="Login" onclick="check()">Login</button>
+                  <label>
+                  <input class="remember" type="checkbox" checked="checked" name="remember"> Lembrar-me
+                  </label>
+               </div>
+               <div class="container" style="background-color:#f1f1f1">
+                  <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancelar</button>
+                  <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn" >Esqueceu-se da sua palavra-passe?</button>
+               </div>
+            </form>
+         </div>
+   </body>
+   <footer>
+      <div class="names">
+         <br>
+         <a class="name-footer"> Maria Santos </a>
+         <a class="name-footer"> Bruno Gonzalez </a>
+         <a class="name-footer"> Mariana Valente </a>
+      </div>
+      <p class="copyright">©  2021 Company - All Rights Reserved. A Equipa Pokemon Jade</p>
+   </footer>
+</html>

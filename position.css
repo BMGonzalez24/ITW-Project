@@ -1,0 +1,472 @@
+/* Grupo: 16, Número: 56941, Nome: Bruno Gonzalez , PL: 26 */
+/* Grupo: 16, Número: 56915, Nome: Maria Santos   , PL: 26 */
+/* Grupo: 16, Número: 55945, Nome: Mariana Valente, PL: 26 */
+
+/* FICA TUDO o QUE NÃO SEJA IMAGES/LOGOS/BACKGROUNS, FONTS E CORES */
+
+h1 {
+  width: auto;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  
+}
+
+h2 u{
+  text-align: center;
+}
+  
+p, video {
+  margin: 20px
+}
+
+body{
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo-pag-inicial {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  position: relative;
+  top: 25px; 
+  display: block;
+}
+  
+  /* Caixas */
+.grid {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: auto;
+  display: grid;
+  grid-template-columns: auto;
+  position: relative;
+  bottom: 0px;
+}
+
+.grid_pagina_principal {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: auto;
+  display: grid;
+  grid-template-columns: auto 25%;
+  position: relative;
+  bottom: 0px;
+}
+
+.caixa {
+  border-radius: 10px;
+}
+
+.caixaUpdates {
+  width: 300px;
+  margin-left: 7px;
+  border-radius: 10px;
+}
+
+.topo {
+  position: fixed;
+  left: 2em;
+  bottom: 3em;
+  padding: 5px;
+  border-radius: 15px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Botão jogar agora */
+
+.button-jogar {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  bottom: 20px; 
+  display: block;
+  border: none;
+  width: 300px; 
+  padding: 32px 25px;
+  text-decoration: none;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+/* Footer */
+
+footer {
+  padding: 0 10px;
+  list-style:none;
+  text-align:center;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-decoration:none;
+}
+
+.copyright {
+  margin-top:15px;
+  text-align:center;
+  margin-bottom: 0;
+}
+
+.names {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.names a {
+  margin: 0 15px;
+}
+
+.name-footer {
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid;
+  border-radius: 35px;
+  padding: 7px 20px;
+  line-height: 30px;
+}
+
+/* Barra navegação */
+
+.barra-navegacao {
+  margin-left: 0px;
+  margin-right: 0px;
+  top: 0;
+}
+
+.nav-bar-elemento {
+  display: inline;
+  float: left;
+}
+
+.nav-bar {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.nav-bar-elemento:last-child {
+  border-right: none;
+}
+
+.nav-bar-elemento a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.logo-nav-bar {
+  display: inline-block;
+  vertical-align: top;
+  width: auto;
+  height: 21px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 0.2px;   
+}
+
+.img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+}
+
+/* Tabelas */
+
+table, th, td {
+  border-collapse: collapse;
+  height: auto;
+  width: auto;
+}
+
+.leaderboard {
+  text-align: center;
+}
+
+.iniciantes {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Pokedex */
+audio {
+  border-radius: 90px;
+  transform: scale(1.05);
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+  text-align: center;
+}
+
+/* Página Como jogar */
+
+.jogar {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Página Sobre */
+
+a {
+  text-decoration: none;
+}
+  
+html {
+  box-sizing: border-box;
+}
+
+.card {
+  width: 200px;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+  
+.equipa {
+  border-radius: 50%;
+}
+  
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+  
+
+@media screen and (max-width: 300px) {
+  .column {
+  width: 80%;
+  display: block;
+  }
+}
+
+
+/* Login */
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  }
+
+/* Style para todos os botões */
+button {
+  padding: 10px 15px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 14px 20px;
+}
+
+/* Posição para botão cancelar */
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+.container {
+  padding: 16px;
+}
+
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1; /* ficar no topo */
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  padding-top: 50px;
+}
+
+.modal-content {
+  margin: 5% auto 15% auto; 
+  border: 1px solid #888;
+  width: 50%; 
+}
+
+.close:hover, .close:focus {
+  cursor: pointer;
+}
+
+/* Animação */
+  
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+  
+@media screen and (max-width: 300px) {
+  span.psw {
+  display: block;
+  float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+/* Sign up */
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  outline: none;
+}
+
+/* style para botão */
+button {
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+.modal-content {
+  margin: 5% auto 15% auto; 
+  width: 50%; 
+}
+
+hr {
+  margin-bottom: 25px;
+}
+
+/* Botão close */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+  width: 100%;
+  }
+}
+
+/* Essencial para o jogo */
+
+.grid-jogo {
+  display: grid;
+
+  position: relative;
+  gap: 0px 0px;
+  margin-right: auto;
+  margin-left: auto;
+  grid-gap: 1rem;
+  
+  grid-template-columns: 130px 130px 130px 130px 130px 130px 130px 130px;
+  grid-template-rows: 130px 130px 130px 130px 130px 130px 130px;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/154887/Routetut.png");
+  border: 5px solid #3e8e41;
+  grid-template-areas:
+    ". . . . . . . ."
+    ". . . . . . . ."
+    ". . . . . . . ."
+    ". . . . . . . ."
+    ". . . . . . . ."
+    ". . . . . . . ."
+    ". . . . . . . ."
+}
+
+img.bonecoJogador {
+  width: 45%;
+  height: auto;
+  margin-top: 15%;
+}
+
+.itemJogo {
+font-size: 30px;
+color: white;
+text-align: center;
+}
+
+.itemJogo.partida {
+background-image: url("jogo/partida.png");
+background-size: 100% 100%;
+}
+
+.itemJogo.arvore {
+background-image: url("jogo/arvore.png");
+background-size: 100% 100%;
+}
+
+.itemJogo.pedra {
+background-image: url("jogo/pedra.png");
+background-size: 100% 100%;
+}
+
+.pokebola {
+width: 50px;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+.itemJogo.chegada {
+background-image: url("jogo/chegada.png");
+background-size: 100% 100%;
+}

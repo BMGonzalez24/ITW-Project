@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<!-- Grupo: 16, Número: 56941, Nome: Bruno Gonzalez , PL: 26 -->
+<!-- Grupo: 16, Número: 56915, Nome: Maria Santos   , PL: 26 -->
+<!-- Grupo: 16, Número: 55945, Nome: Mariana Valente, PL: 26 -->
+
+<html lang="pt">
+   <head>
+      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="position.css">
+      <script src="comportamento.js"></script>
+      <link rel="shortcut icon" type="image/x-icon" href="imagens/favicon.ico" />
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Sobre a equipa</title>
+   </head>
+   <body>
+      <header>
+         <nav>
+            <div class="barra-navegacao">
+               <ul class="nav-bar" id="topo">
+                  <li class="nav-bar-elemento"><a> <img class="logo-nav-bar" src="imagens/logo-nav-bar.png" alt="logo" height=30></a></li>
+                  <li class="nav-bar-elemento"><a href="index.html">                       PÁGINA INICIAL</a></li>
+                  <li class="nav-bar-elemento"><a href="pokedex.html">                     POKEDEX</a></li>
+                  <li class="nav-bar-elemento"><a href="comojogar.html">                   COMO JOGAR</a></li>
+                  <li class="nav-bar-elemento"><a href="sobreaequipa.html">                SOBRE</a></li>
+                  <li class="nav-bar-elemento"><a href="leaderboard.html">                 LEADERBOARD</a></li>
+                  <li class="nav-bar-elemento" style="float:right" onclick="document.getElementById('registar').style.display='block'"><a>REGISTAR</a></li>
+                  <li class="nav-bar-elemento" style="float:right" onclick="document.getElementById('login').style.display='block'"><a>   LOGIN</a></li>
+               </ul>
+            </div>
+         </nav>
+      </header>
+      <h1>SOBRE A NOSSA EQUIPA</h1>
+      <main class="grid">
+         <div class="caixa">
+            <p>Somos três estudantes da Faculdade de Ciências da Universidade de Lisboa que nos reunimos para criar e disponibilizar uma fonte de divertimento acessível a qualquer pessoa com um browser instalado no seu PC. Fazemos o que fazemos por puro gosto e com o intuito de melhorar as nossas capacidades nas diversas áreas da informática. Contamos consigo para ajudar-nos a melhorar este projeto a cada dia que passa!
+            </p>
+            <div>
+               <h2>Contactos</h2>
+               <p>Para gestão de conta Pokémon Jade:
+                  gestaoconta@suporte.pokemonjade.com
+               </p>
+               <p>Assuntos relacionados com o jogo (sugestões, bugs, problemas, ect.):
+                  tecnico@suporte.pokemonjade.com
+               </p>
+            </div>
+            <br>
+            <div class="row">
+               <div class="column">
+                  <div class="card">
+                     <img class="equipa" src="imagens/maria.jpg" alt="Maria" style="width:100%">
+                     <div class="container">
+                        <h2>Maria Santos</h2>
+                        <p class="title">Designer Gráfica</p>
+                        <p>18 anos </p>
+                        <p> Licenciatura em Tecnologias de Informação</p>
+                        <p> mariassantos175@gmail.com</p>
+                        <p>
+                        <form method="get" action="https://mail.google.com/mail/u/1/#inbox?compose=CllgCJZZzNRbtTkBPrwKxPXTmnWWTtxHMWXdrZWScTPNXzZnqhHVvCmmDMtKGPJgdBWWRnvxjlq" target="_blank" >
+                           <button class="button" type="submit">Contactar</button>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+               <div class="column">
+                  <div class="card">
+                     <img class="equipa" src="imagens/bruno.jpg" alt="Bruno" style="width:100%">
+                     <div class="container">
+                        <h2>Bruno Gonzalez</h2>
+                        <p class="title">Balanço do Jogo</p>
+                        <p>21 anos </p>
+                        <p> Licenciatura em Tecnologias de Informação</p>
+                        <p>bruno.mg.gonzalez@gmail.com</p>
+                        <p>
+                        <form method="get" action="https://mail.google.com/mail/u/1/?#inbox?compose=CllgCJTJFqFtXqQtVTdxDDmMClFRzqDCbxBDXfGTTWhQQGssnQZtCgdJqbWDHLpzSTZZNHszqrg" target="_blank" >
+                           <button class="button" type="submit">Contactar</button>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+               <div class="column">
+                  <div class="card">
+                     <img class="equipa" src="imagens/mariana.jpg" alt="Mariana" style="width:100%">
+                     <div class="container">
+                        <h2>Mariana Valente</h2>
+                        <p class="title">Desenvolvimento do Jogo</p>
+                        <p>20 anos </p>
+                        <p> Licenciatura em Tecnologias de Informação</p>
+                        <p>marianavalente457@gmail.com</p>
+                        <p>
+                        <form method="get" action="https://mail.google.com/mail/u/1/#inbox?compose=DmwnWrRvwLqFKqdWPQKbsXpCgrKwHNpXzkgmHtthcFGVRfJVKHntKjMddZjcTZfMBRbVltzCwJrg" target="_blank" >
+                           <button class="button" type="submit">Contactar</button>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+      
+      
+      <div><a class="topo" href="#topo" style="color:black;"> VOLTAR<BR>AO TOPO</a></div>
+         <div id="registar" class="modal">
+            <span onclick="document.getElementById('registar').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <form class="modal-content" action="file:///Users/mariasantos/Desktop/2o%20semestre/Tecnologias%20Web/Projeto%20Pokemon/index.html">
+               <div class="container">
+                  <h1>Registar</h1>
+                  <p>Preencha os seguintes espaços para criar uma conta.</p>
+                  <hr>
+                  <div class="inputBox">
+                  <label for="username"><b>Username</b></label>
+                  <input style="display: none;">
+                  <input type="text" placeholder="Escreva um username" name="username" required id="username">
+                  </div>
+                  <div class="inputBox">
+                  <label for="password"><b>Password</b></label>
+                  <input style="display: none;">
+                  <input type="password" placeholder="Enter Password" name="psw" required id="pw">
+                  </div>
+                  <label for="psw-repeat"><b>Repetir Password</b></label>
+                  <input style="display: none;">
+                  <input type="password" placeholder="Repeat Password" name="psw-repeat" required id="repeat-pw">
+                  
+                  <label>
+                  <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Lembrar-me
+                  </label>
+                  <p>Ao criar uma conta, concorda com os <a href="#" style="color:dodgerblue">Termos & Política de Privacidade</a>.</p>
+                  <div class="clearfix">
+                     <button type="button" onclick="document.getElementById('registar').style.display='none'" class="cancelbtn">Cancelar</button>
+                     <button type="submit" value="get Account" onclick="store()"class="signupbtn">Registar-me</button>
+                  </div>
+               </div>
+            </form>
+         </div>
+         <div id="login" class="modal">
+            <form class="modal-content animate" action="file:///Users/mariasantos/Desktop/2o%20semestre/Tecnologias%20Web/Projeto%20Pokemon/jogo.html">
+               <div class="imgcontainer">
+                  <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+               </div>
+               <div class="image">
+                  <img src="imagens/NicePng_pokemon-png-images_623393.png" alt="bulbasaur" width=320 height=200>
+               </div>
+               <div class="container">
+                  <label for="username"><b>Username</b></label>
+                  <input style="display:none">
+                  <input type="text" placeholder="Enter Username" name="uname" required id="userName">
+                  <label for="psw"><b>Password</b></label>
+                  <input style="display: none;">
+                  <input type="password" placeholder="Enter Password" name="psw" required id="userPw">
+                  <button type="submit" value="Login" onclick="check()">Login</button>
+                  <label>
+                  <input class="remember" type="checkbox" checked="checked" name="remember"> Lembrar-me
+                  </label>
+               </div>
+               <div class="container" style="background-color:#f1f1f1">
+                  <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancelar</button>
+                  <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn" >Esqueceu-se da sua palavra-passe?</button>
+               </div>
+            </form>
+         </div>
+   </body>
+   <footer>
+      <div class="names">
+         <br>
+         <a class="name-footer"> Maria Santos </a>
+         <a class="name-footer"> Bruno Gonzalez </a>
+         <a class="name-footer"> Mariana Valente </a>
+      </div>
+      <p class="copyright">©  2021 Company - All Rights Reserved. A Equipa Pokemon Jade</p>
+   </footer>
+</html>

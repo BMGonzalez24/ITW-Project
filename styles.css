@@ -1,0 +1,303 @@
+/* Grupo: 16, Número: 56941, Nome: Bruno Gonzalez , PL: 26 */
+/* Grupo: 16, Número: 56915, Nome: Maria Santos   , PL: 26 */
+/* Grupo: 16, Número: 55945, Nome: Mariana Valente, PL: 26 */
+
+
+/* FICA TUDO QUE SEJA IMAGES/LOGOS/BACKGROUNS, FONTS E CORES */
+
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro&family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hepta+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+h1 {
+  font-size: 25px;
+  font-family: 'Press Start 2P', cursive;
+  background-color:  #ccffcc;
+  border: 5px #008040 solid;
+}
+
+h2 u{
+  font-family: 'Hepta Slab', serif;
+  font-size: 20px;
+}
+
+
+header {
+  font-family: 'Advent Pro', sans-serif;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+head {
+  color: white;
+  background-color: #ffe6ff;
+}
+
+body{
+  background-image: url("imagens/thumb-1920-998181.jpg");
+  font-family: 'Hepta Slab', serif;
+  color: black;
+}
+
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+video {
+  width: 300px;
+  height: 270px;
+  background-color: #008040;
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  0%   {background-color:yellow; left:0px; top:0px;
+  }
+}
+
+/* Caixas */
+
+.caixa {
+  background-color: #ccffcc;
+  color: black;
+  border: 5px #008040 solid;
+}
+
+.topo {
+  background-color: #ccffcc;
+  color: black;
+}
+
+/* Botão jogar agora */
+
+.button-jogar {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  border-radius: 12px;
+  border: 2px solid #4CAF50;
+  box-shadow: 0 3px #999;
+}
+
+
+.button-jogar a {
+  color: white;
+}
+
+
+.button-jogar:hover {
+  box-shadow: 0 22px 20px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  color: #fff;
+  background: #111;
+}
+
+.button-jogar:hover:after {
+  background: #111;
+}
+
+.button-jogar:hover:before  {
+  opacity: 0;
+}
+
+.button-jogar:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+}
+
+/* Footer */
+
+footer {
+  font-size:18px;
+  background-color: white;
+  color: #4b4c4d;
+  opacity:0.9;
+}
+
+.copyright {
+  color:#aaa;
+  font-size:13px;
+}
+
+.names {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.name-footer {
+  color: grey;
+  font-size: 13px;
+}
+
+.name-footer a {
+  color: white;
+}
+
+.caixaUpdates {
+  border: 5px #008040 solid;
+  background-color: #ccffcc;
+  color: black;
+}
+
+/* Barra navegação */
+
+.nav-bar-elemento {
+  border-right: 1px solid #bbb;
+}
+
+.nav-bar {
+  background-color: #008040;
+}
+
+.nav-bar-elemento a {
+  color: white;
+  text-shadow: 0 0 5px black;
+}
+
+.nav-bar-elemento a:hover:not(.active) {
+  background-color: #00cc7a;
+}
+
+/* Tabelas */
+
+table, th, td {
+  font-size: 20px;
+  border: 2px solid #008040;
+  background-color: #ffffcc;
+}
+
+/* Pokedex */
+audio {
+  box-shadow: 5px 5px 20px #3d3c3c;
+}
+
+/* Página Sobre */
+
+.title {
+  color:  #008040;
+}
+  
+.button {
+  background-color: #008040;
+
+}
+  
+.button:hover {
+  background-color: #555;
+  opacity: 0.8;
+}
+
+a:link {
+    color:#FFFFFF;
+}
+
+a:visited { 
+  color: white; 
+}
+
+/* Página Como jogar */
+/* ----------------- */
+
+/* Página Sobre */
+
+/* ------------ */
+
+/* Login */
+
+input[type=text], input[type=password] {
+  border: 1px solid #ccc;
+}
+
+/* Style para todos os botões */
+button {
+
+  background-color: #008040;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.8;
+  }
+
+.cancelbtn {
+  background-color:  #cc0000;
+}
+
+/* centrar imagem */ 
+.image {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 50%;
+  border-radius: 50%;
+}
+
+/* Posição para botão cancelar */
+
+.modal {
+  background-color: #474e5d;
+}
+
+.modal-content {
+  background-color: #fefefe;
+}
+
+.close:hover, .close:focus {
+  color: red;
+}
+
+/* Animação */
+.remember {
+font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Sign up */
+
+input[type=text], input[type=password] {
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+}
+
+/* style para botão */
+  button {
+  background-color: #008040;
+  color: white;
+  opacity: 0.9;
+}
+
+.cancelbtn, .signupbtn {
+  background-color: #008040;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  border: 1px solid #888;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+}
+
+/* Botão close */
+.close {
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.timer {
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  font-size: small;
+  margin-left: auto;
+  margin-right: auto;
+}
